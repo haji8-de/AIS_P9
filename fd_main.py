@@ -35,7 +35,6 @@ with st.echo():
     import json
     import streamlit as st
     from streamlit_folium import st_folium
-    from googletrans import Translator
     import time
     import koreanize_matplotlib
     
