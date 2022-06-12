@@ -9,6 +9,6 @@ folium
 MarkerCluster
 json
 streamlit
-streamlit_folium import st_folium
+st_folium
 time
 koreanize_matplotlib
