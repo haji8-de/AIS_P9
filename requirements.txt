@@ -3,12 +3,10 @@ pandas
 seaborn
 plotly
 matplotlib
+koreanize_matplotlib
 cufflinks
 chart_studio
 folium
-MarkerCluster
-json
 streamlit
-st_folium
-time
-koreanize_matplotlib
+streamlit_folium
+
