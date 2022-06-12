@@ -42,15 +42,15 @@ with st.echo():
     
 
 ## Data Load
-df_death_rate = pd.read_csv("../data/pre_df/df_death_rate.csv")
-df_Nmw = pd.read_csv("../data/pre_df/df_Nmw.csv")
-df_service = pd.read_csv("../data/pre_df/df_service.csv")
-df_service_common = pd.read_csv("../data/pre_df/df_service_common.csv")
-df_medicion = pd.read_csv("../data/pre_df/df_medicion.csv")
-df_welfare = pd.read_csv("../data/pre_df/df_welfare.csv")
+df_death_rate = pd.read_csv("data/pre_df/df_death_rate.csv")
+df_Nmw = pd.read_csv("data/pre_df/df_Nmw.csv")
+df_service = pd.read_csv("data/pre_df/df_service.csv")
+df_service_common = pd.read_csv("data/pre_df/df_service_common.csv")
+df_medicion = pd.read_csv("data/pre_df/df_medicion.csv")
+df_welfare = pd.read_csv("data/pre_df/df_welfare.csv")
 ## json
-g_p = open("../data/countries.geo.edited.json", encoding="utf-8")
-gp = open("../data/countries.json", encoding="utf-8")
+g_p = open("data/countries.geo.edited.json", encoding="utf-8")
+gp = open("data/countries.json", encoding="utf-8")
 geo_poly = json.load(g_p)
 geo_point = pd.json_normalize(json.load(gp))
 g_p.close()
@@ -91,11 +91,11 @@ with st.echo():
             time.sleep(0.5)
         return temp
 
-    dict_kor2eng = {}
-    list_kor2eng = kor2eng(df_Nmw["국가"].unique())
+    # dict_kor2eng = {}
+    # list_kor2eng = kor2eng(df_Nmw["국가"].unique())
 
-    for kor, eng in zip(df_Nmw["국가"].unique(), list_kor2eng):
-        dict_kor2eng[kor] = eng
+    # for kor, eng in zip(df_Nmw["국가"].unique(), list_kor2eng):
+    #    dict_kor2eng[kor] = eng
 
 
 ## part 1
@@ -253,8 +253,8 @@ with st.echo():
     sns.pointplot(data=df_medicion, x='연도', y='의약품소비량', hue='의약품', ci=None, estimator=np.sum)
     st.pyplot(fig)
 
-df_sale = pd.read_csv("../data/pre_df/df_sale.csv", encoding="cp949")
-df_consume = pd.read_csv("../data/pre_df/df_consume.csv", encoding="cp949")
+df_sale = pd.read_csv("data/pre_df/df_sale.csv", encoding="cp949")
+df_consume = pd.read_csv("data/pre_df/df_consume.csv", encoding="cp949")
 df_consume = df_consume.rename(columns={'시점':'연도'})
 df_consume = df_consume.rename(columns={'데이터':'의약품소비량'})
 df_sale = df_sale.rename(columns={'시점' : '연도'})
@@ -304,7 +304,7 @@ with st.echo():
 st.markdown("## 6. 최종")
 st.markdown("### Data set")
 st.text("앞서 사용한 모든 데이터를 합쳐 하나의 데이터로 생성")
-df_corr = pd.read_csv("../data/pre_df/df_corr.csv")
+df_corr = pd.read_csv("data/pre_df/df_corr.csv")
 df_corr_pre = df_corr[["국가", "연도", "평균 사망률", "평균 의료 인력 수", "1인당 보건지출", "평균 소비량", "평균 판매량", "평균 치료비", "평균 복지 비용(G$)"]]
 st.dataframe(df_corr_pre)
 ## 결측치 확인
