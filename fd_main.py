@@ -38,14 +38,6 @@ with st.echo():
     from googletrans import Translator
     import time
 
-plt.style.use("ggplot")
-
-font_family = get_font_family()
-plt.rc("font", family=font_family)
-plt.rc("axes", unicode_minus=False)
-
-set_matplotlib_formats("retina")
-
 ## Data Load
 df_death_rate = pd.read_csv("../data/pre_df/df_death_rate.csv")
 df_Nmw = pd.read_csv("../data/pre_df/df_Nmw.csv")
