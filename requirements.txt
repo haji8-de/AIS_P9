@@ -6,8 +6,6 @@ matplotlib
 cufflinks
 chart_studio
 folium
-json
 streamlit
 streamlit_folium
 googletrans
-time
