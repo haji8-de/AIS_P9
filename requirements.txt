@@ -9,6 +9,4 @@ folium
 streamlit
 streamlit_folium
 googletrans
-IPython
-platform
 koreanize_matplotlib
