@@ -6,7 +6,9 @@ matplotlib
 cufflinks
 chart_studio
 folium
+MarkerCluster
+json
 streamlit
-streamlit_folium
-googletrans
+streamlit_folium import st_folium
+time
 koreanize_matplotlib
