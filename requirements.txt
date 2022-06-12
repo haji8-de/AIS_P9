@@ -1,14 +1,13 @@
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import plotly.express as px
-import matplotlib.pyplot as plt
-import cufflinks as cf
-import chart_studio
-import folium
-from folium.plugins import MarkerCluster
-import json
-import streamlit as st
-from streamlit_folium import st_folium
-from googletrans import Translator
-import time
+numpy
+pandas
+seaborn
+plotly
+matplotlib
+cufflinks
+chart_studio
+folium
+json
+streamlit
+streamlit_folium
+googletrans
+time
