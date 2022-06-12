@@ -37,29 +37,6 @@ with st.echo():
     from streamlit_folium import st_folium
     from googletrans import Translator
     import time
-    
-## 한글폰트 설정
-from IPython.display import set_matplotlib_formats
-
-def get_font_family():
-    import platform
-    system_name = platform.system()
-
-    if system_name == "Darwin" :
-        font_family = "AppleGothic"
-    elif system_name == "Windows":
-        font_family = "Malgun Gothic"
-    else:
-        import matplotlib as mpl
-        mpl.font_manager._rebuild()
-        findfont = mpl.font_manager.fontManager.findfont
-        mpl.font_manager.findfont = findfont
-        mpl.backends.backend_agg.findfont = findfont
-        
-        font_family = "NanumBarunGothic"
-    return font_family
-
-get_font_family()
 
 plt.style.use("ggplot")
 
