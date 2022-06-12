@@ -1,18 +1,3 @@
-import numpy as np
-import pandas as pd
-import seaborn as sns
-import plotly.express as px
-import matplotlib.pyplot as plt
-import cufflinks as cf
-import chart_studio
-import folium
-from folium.plugins import MarkerCluster
-import json
-import streamlit as st
-from streamlit_folium import st_folium
-from googletrans import Translator
-import time
-
 ## Title
 st.title("질병 사망자 및 보건 환경 비교 분석")
 st.markdown("---")
@@ -37,6 +22,8 @@ with st.echo():
     from streamlit_folium import st_folium
     from googletrans import Translator
     import time
+    import koreanize_matplotlib
+    
 
 ## Data Load
 df_death_rate = pd.read_csv("../data/pre_df/df_death_rate.csv")
