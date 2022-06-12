@@ -1,7 +1,6 @@
-# 
 # 멋쟁이 사자처럼 AI School 6기
 ## MID Project - 2조
-### 주요 질병 사망자 및 보건 환경 비교 (CAoMDDaHE)
+### 주요 질병 사망자 및 보건 환경 비교 (CAoMDDaHE) (배포용)
 #### Comparative Analysis of Major Disease Deaths and Health Environment
 국가 별 보건 환경 비교를 통한 주요 질병 사망률 데이터 분석  
 
