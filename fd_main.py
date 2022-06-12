@@ -77,27 +77,6 @@ with st.echo():
         '슬로베니아',  '프랑스',  '스웨덴',  '노르웨이',  '뉴질랜드',  '라트비아',  
         '덴마크',  '오스트리아',  '포르투갈',  '아일랜드',  '아이슬란드']
 
-## 국가 영문명 추가
-st.markdown("## 영문 국가명 추가")
-st.markdown("데이터를 전처리하는 과정에서 영문 국가명을 추가해줬습니다.\n"
-            "Google Trans API를 이용했습니다\n")
-with st.echo():
-    translator = Translator()
-    
-    def kor2eng(list_of_country):
-        temp = []
-        for _ in list_of_country:
-            temp.append(translator.translate(_).text.lower())
-            time.sleep(0.5)
-        return temp
-
-    # dict_kor2eng = {}
-    # list_kor2eng = kor2eng(df_Nmw["국가"].unique())
-
-    # for kor, eng in zip(df_Nmw["국가"].unique(), list_kor2eng):
-    #    dict_kor2eng[kor] = eng
-
-
 ## part 1
 st.markdown("## 1. 주요 사망 원인별 사망률")
 st.markdown("### Data set")
