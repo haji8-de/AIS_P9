@@ -22,11 +22,8 @@ country_intersection = ['룩셈부르크',  '네덜란드',  '영국',  '이탈�
         '덴마크',  '오스트리아',  '포르투갈',  '아일랜드',  '아이슬란드']
 
 ## Data Load
-df_death_rate = pd.read_csv("../data/pre_df/df_death_rate.csv")
-df_Nmw = pd.read_csv("../data/pre_df/df_Nmw.csv")
-df_service = pd.read_csv("../data/pre_df/df_service.csv")
 df_service_common = pd.read_csv("../data/pre_df/df_service_common.csv")
-df_medicion = pd.read_csv("../data/pre_df/df_medicion.csv")
+
 df_welfare = pd.read_csv("../data/pre_df/df_welfare.csv")
 ## json
 g_p = open("../data/countries.geo.edited.json", encoding="utf-8")
