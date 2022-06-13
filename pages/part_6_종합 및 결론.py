@@ -21,26 +21,12 @@ country_intersection = ['룩셈부르크',  '네덜란드',  '영국',  '이탈�
         '슬로베니아',  '프랑스',  '스웨덴',  '노르웨이',  '뉴질랜드',  '라트비아',  
         '덴마크',  '오스트리아',  '포르투갈',  '아일랜드',  '아이슬란드']
 
-## Data Load
-df_death_rate = pd.read_csv("../data/pre_df/df_death_rate.csv")
-df_Nmw = pd.read_csv("../data/pre_df/df_Nmw.csv")
-df_service = pd.read_csv("../data/pre_df/df_service.csv")
-df_service_common = pd.read_csv("../data/pre_df/df_service_common.csv")
-df_medicion = pd.read_csv("../data/pre_df/df_medicion.csv")
-df_welfare = pd.read_csv("../data/pre_df/df_welfare.csv")
-## json
-g_p = open("../data/countries.geo.edited.json", encoding="utf-8")
-gp = open("../data/countries.json", encoding="utf-8")
-geo_poly = json.load(g_p)
-geo_point = pd.json_normalize(json.load(gp))
-g_p.close()
-gp.close()
 
 ## part 6
 st.markdown("## 6. 최종")
 st.markdown("### Data set")
 st.text("앞서 사용한 모든 데이터를 합쳐 하나의 데이터로 생성")
-df_corr = pd.read_csv("data/pre_df/df_corr.csv")
+df_corr = pd.read_csv("../data/pre_df/df_corr.csv")
 df_corr_pre = df_corr[["국가", "연도", "평균 사망률", "평균 의료 인력 수", "1인당 보건지출", "평균 소비량", "평균 판매량", "평균 치료비", "평균 복지 비용(G$)"]]
 st.dataframe(df_corr_pre)
 ## 결측치 확인
