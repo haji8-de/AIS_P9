@@ -431,7 +431,7 @@ with st.echo():
     st.pyplot(fig)
     
 st.markdown("##### 3. 보건 관련 지출 간 관계 분석")
-st.markdown("![img](data\보건 관련 지출 간 관계 분석.png)")
+st.markdown("![img](data/보건 관련 지출 간 관계 분석.png)")
 
 st.markdown("##### 4. 국내 사망률 - 보건 서비스 지출 간 관계 분석")
 df_temp_corr = df_corr_kr.groupby('연도', as_index = False)[['사망률']].mean()
