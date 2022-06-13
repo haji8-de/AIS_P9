@@ -23,11 +23,11 @@ country_intersection = ['룩셈부르크',  '네덜란드',  '영국',  '이탈�
 
 ## Data Load
 
-df_medicion = pd.read_csv("../data/pre_df/df_medicion.csv")
+df_medicion = pd.read_csv("data/pre_df/df_medicion.csv")
 
 ## json
-g_p = open("../data/countries.geo.edited.json", encoding="utf-8")
-gp = open("../data/countries.json", encoding="utf-8")
+g_p = open("data/countries.geo.edited.json", encoding="utf-8")
+gp = open("data/countries.json", encoding="utf-8")
 geo_poly = json.load(g_p)
 geo_point = pd.json_normalize(json.load(gp))
 g_p.close()
@@ -55,8 +55,8 @@ with st.echo():
     sns.pointplot(data=df_medicion, x='연도', y='의약품소비량', hue='의약품', ci=None, estimator=np.sum)
     st.pyplot(fig)
 
-df_sale = pd.read_csv("../data/pre_df/df_sale.csv", encoding="cp949")
-df_consume = pd.read_csv("../data/pre_df/df_consume.csv", encoding="cp949")
+df_sale = pd.read_csv("data/pre_df/df_sale.csv", encoding="cp949")
+df_consume = pd.read_csv("data/pre_df/df_consume.csv", encoding="cp949")
 df_consume = df_consume.rename(columns={'시점':'연도'})
 df_consume = df_consume.rename(columns={'데이터':'의약품소비량'})
 df_sale = df_sale.rename(columns={'시점' : '연도'})

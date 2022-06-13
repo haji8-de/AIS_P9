@@ -22,10 +22,10 @@ country_intersection = ['룩셈부르크',  '네덜란드',  '영국',  '이탈�
         '덴마크',  '오스트리아',  '포르투갈',  '아일랜드',  '아이슬란드']
 
 ## Data Load
-df_death_rate = pd.read_csv("../data/pre_df/df_death_rate.csv")
+df_death_rate = pd.read_csv("data/pre_df/df_death_rate.csv")
 ## json
-g_p = open("../data/countries.geo.edited.json", encoding="utf-8")
-gp = open("../data/countries.json", encoding="utf-8")
+g_p = open("data/countries.geo.edited.json", encoding="utf-8")
+gp = open("data/countries.json", encoding="utf-8")
 geo_poly = json.load(g_p)
 geo_point = pd.json_normalize(json.load(gp))
 g_p.close()
